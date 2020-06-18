@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   /* Below setting sizing for each row */
-  grid-template-rows: 1fr 10fr 1fr; 
+  grid-template-rows: 60px 20fr 60px; 
   grid-auto-rows: auto;
   grid-column-gap:  20px;
   grid-row-gap:  20px;
