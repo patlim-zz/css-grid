@@ -1,11 +1,45 @@
 /* -----  Grids  --------------------------------------------- */
 
+.border {
+  border: 1px solid blue;
+}
+
 .grid-auto {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: auto;
   grid-column-gap:  20px;
   grid-row-gap:  20px;
+  /* grid-gap: 20px; gives the same result  */
+  /* here you can template your layout (below we are using 3 columns e.g. grid-template-columns: 1fr 1fr 1fr aka repeat(12, 1fr);
+    grid-template-areas: 
+      "header header header" header covers all three colums
+      "nav main ads" second row has a nav, main and ads on each col
+      "footer footer footer";
+      if you want an empty cell use .
+      e.g. "nav . ads" - this will give you an empty cell between nav and ads
+    
+    here we set the header to be 60px, middle row stretches, footer to be 60px
+    grid-template-rows: 60px 1fr 60px;
+
+    here we set the column sizes
+    grid-template-columns 20% 1fr 15%;
+
+    you can combine all three properties into grid-template e.g.
+    grid-template:
+      "header header header 60px" - the numbers here are row sizings
+      "nav main ads 1fr"
+      "footer footer footer 60px"
+      / 20% 1fr 15%; - these are column sizings
+
+    then you refer to these like below
+    .item-1 {
+      grid-area: header;
+    }
+    .item-2 {
+      grid-area: nav;
+    }
+    and so on... */
 }
 
 .grid-six {
@@ -18,6 +52,12 @@
 
 .gr-1-2 {
   grid-row: 1 / 2;
+  /* grid-row: 1 / span 3; this element then starts on row line 1 and spans 3 rows */
+  /* grid-area: 1 / 3 / 1 / 4; this element then has row start 1 to 3 end and col start 1 to 4 end */
+  /* items can overlap using Z index to set layering */
+  /* justify-self: center; horizontally justify within grid cell
+  align-self: center; vertically align within grid cell
+  place-self: center; same as both above lines */
   -ms-grid-row: 1;
 }
 
