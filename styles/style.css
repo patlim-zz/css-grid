@@ -1,0 +1,36 @@
+header, .contact button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: red;
+  background: #2b2b2b;
+  height: 100vh;
+}
+
+header button, .contact button button {
+  background: #38928e;
+}
+
+header button:hover, .contact button button:hover {
+  background: red;
+}
+
+header button::after, .contact button button::after {
+  content: "Helllooo";
+}
+
+.contact button {
+  background: lightcoral;
+  width: 80%;
+}
+/*# sourceMappingURL=style.css.map */

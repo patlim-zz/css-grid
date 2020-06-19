@@ -1,0 +1,27 @@
+@mixin flexCenter($direction, $background) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  background: $background;
+}
+
+header {
+  @include flexCenter(column, red);
+  background: $textColor;
+  height: 100vh;
+  button {
+    background: $primaryBtn;
+    &:hover { // only : for hover etc
+      background: red;
+    }
+    &::after { // double :: for before and after
+      content: "Helllooo";
+    }
+  }
+}
+
+// Below is the same as the button within header above
+// header button {
+//   background: $primaryBtn
+// }
